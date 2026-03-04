@@ -14,10 +14,10 @@ export function buildWordsTL() {
     strokeDashoffset: "1",
   });
 
-  // All pen strokes animate simultaneously for instant, fast reveal
+  // All pen strokes animate simultaneously — slower draw speed
   const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-  tl.to(".pen-stroke", { strokeDashoffset: 0, duration: 0.6 });
+  tl.to(".pen-stroke", { strokeDashoffset: 0, duration: 2.2 });
 
   return tl;
 }
