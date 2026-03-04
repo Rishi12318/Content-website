@@ -1,6 +1,8 @@
 import HeroSection from "./landingpage/herosection";
 import TypeSection from "./landingpage/type";
 import CommunicationSection from "./landingpage/communication";
+import ReviewsSection from "./landingpage/reviews";
+import Footer from "./landingpage/footer";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <HeroSection />
       <TypeSection />
       <CommunicationSection />
+      <ReviewsSection />
+      <Footer />
     </div>
   );
 }

@@ -348,13 +348,45 @@ export default function TypeSection() {
       <section
         style={{
           background: "#E9E4FF",
-          minHeight: "100vh",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          padding: "60px 24px",
+          padding: "56px 24px 48px",
           fontFamily: "'Inter', sans-serif",
         }}
       >
+        {/* Section heading */}
+        <div style={{ textAlign: "center", marginBottom: "40px", maxWidth: "640px" }}>
+          <p style={{
+            fontWeight: 700,
+            fontSize: "0.78rem",
+            letterSpacing: "0.16em",
+            textTransform: "uppercase",
+            color: "#7c5cbf",
+            margin: "0 0 10px",
+          }}>
+            Built for everyone
+          </p>
+          <h2 style={{
+            fontWeight: 900,
+            fontSize: "clamp(2rem, 4vw, 2.8rem)",
+            color: "#1a1a2e",
+            margin: "0 0 14px",
+            lineHeight: 1.15,
+            letterSpacing: "-0.02em",
+          }}>
+            Who uses Abun?
+          </h2>
+          <p style={{
+            fontSize: "1rem",
+            color: "#555",
+            margin: 0,
+            lineHeight: 1.7,
+          }}>
+            From students to seasoned professionals — Abun adapts to every kind of writer.
+          </p>
+        </div>
+
         <div
           className="type-cols"
           style={{
