@@ -135,7 +135,7 @@ export default function CommunicationSection() {
         Our AI bot is here<br />to help you out!!!
       </span>
 
-      {/* Robo1 phrase — fades in during third animation */}
+      {/* Robo1 phrase right — fades in during third animation */}
       <span
         style={{
           position: "absolute",
@@ -160,6 +160,33 @@ export default function CommunicationSection() {
         }}
       >
         with keyword or content<br />get your work done
+      </span>
+
+      {/* Robo1 phrase left — money oriented */}
+      <span
+        style={{
+          position: "absolute",
+          bottom: "30%",
+          left: "4%",
+          zIndex: 2,
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 800,
+          fontStyle: "italic",
+          fontSize: "clamp(1.3rem, 2.2vw, 2rem)",
+          color: "#fff",
+          opacity: stage === "robo1" ? 1 : 0,
+          transform: stage === "robo1" ? "rotate(-4deg) translateY(0)" : "rotate(-4deg) translateY(14px)",
+          transition: "opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s",
+          whiteSpace: "normal",
+          maxWidth: "280px",
+          lineHeight: 1.25,
+          textAlign: "left",
+          pointerEvents: "none",
+          userSelect: "none",
+          textShadow: "0 2px 20px rgba(0,0,0,0.75), 0 0px 4px rgba(0,0,0,0.9)",
+        }}
+      >
+        money oriented
       </span>
 
       {/* Single white box — boy → robo → robo1, each plays once */}
@@ -204,6 +231,7 @@ export default function CommunicationSection() {
             animationData={robo1Animation}
             loop={false}
             autoplay
+            onComplete={() => setStage("boy")}
             style={{ width: "100%", height: "100%" }}
           />
         )}
